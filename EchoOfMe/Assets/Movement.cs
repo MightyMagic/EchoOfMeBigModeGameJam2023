@@ -7,7 +7,6 @@ public class Movement : MonoBehaviour
     [Header("References")]
     public Transform orientation;
     public Transform playerModel;
-
     public Rigidbody rigidBody;
 
     [Header("Movement")]
@@ -18,8 +17,8 @@ public class Movement : MonoBehaviour
     [Header("Ground Check")]
     public float playerHeigth;
     public LayerMask Ground;
+    
     bool isGrounded;
-
     float horizontalInput;
     float verticalInput;
 

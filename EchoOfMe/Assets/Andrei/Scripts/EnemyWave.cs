@@ -5,21 +5,21 @@ using UnityEngine.UI;
 
 public class EnemyWave : MonoBehaviour
 {
+    [Header("References")]
     public float maxFreq;
     public float minFreq;
     public float damagePerSecond;
     [SerializeField] Slider hpBar;
 
+    [Header("Debug display")]
     public float hp;
 
-    // Start is called before the first frame update
     void Start()
     {
         hp = 100f;
         UpdateHP();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -31,7 +31,6 @@ public class EnemyWave : MonoBehaviour
     {
         hp -= damagePerSecond * Time.deltaTime;
         UpdateHP();
-        //Destroy(this.gameObject);
     }
 
     private void Death()

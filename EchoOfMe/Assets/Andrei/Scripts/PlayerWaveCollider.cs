@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerWaveCollider : MonoBehaviour
 {
-    public List<GameObject> enemiesInRange= new List<GameObject>();
+    [Header("References")]
     [SerializeField] WaveControl waveControl;
+
+    [Header("Internal")]
+    private List<GameObject> enemiesInRange = new List<GameObject>();
     void Start()
     {
         
@@ -13,10 +16,15 @@ public class PlayerWaveCollider : MonoBehaviour
 
     void Update()
     {
-        
-        for(int i = enemiesInRange.Count - 1; i > -1; i--) 
+        CheckCurrentEnemies();      
+    }
+
+    // iterate through the current list and damage enemies with matching frequency, clean up all the null members
+    private void CheckCurrentEnemies()
+    {
+        for (int i = enemiesInRange.Count - 1; i > -1; i--)
         {
-            GameObject enemy = enemiesInRange[i];   
+            GameObject enemy = enemiesInRange[i];
             if (enemy != null)
             {
                 if (enemy.GetComponent<EnemyWave>())
@@ -29,7 +37,7 @@ public class PlayerWaveCollider : MonoBehaviour
                 }
             }
             else
-                enemiesInRange.Remove(enemy);
+               RemoveEnemy(enemy);
         }
     }
 
@@ -37,7 +45,7 @@ public class PlayerWaveCollider : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            enemiesInRange.Add(other.gameObject);
+            AppendEnemy(other.gameObject);
         }
     }
 
@@ -45,7 +53,17 @@ public class PlayerWaveCollider : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            enemiesInRange.Remove(other.gameObject);
+            RemoveEnemy(other.gameObject);
         }
+    }
+
+    void AppendEnemy(GameObject enemy)
+    {
+        enemiesInRange.Add(enemy);
+    }
+
+    void RemoveEnemy(GameObject enemy)
+    {
+        enemiesInRange.Remove(enemy);
     }
 }

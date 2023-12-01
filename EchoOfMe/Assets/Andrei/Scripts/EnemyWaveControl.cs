@@ -14,13 +14,13 @@ public class EnemyWaveControl : MonoBehaviour
 
 
     [Header("Internal")]
-    float frequency;
+    public float frequency;
     float timer;
 
     void Start()
     {
         timer = 0f;
-        frequency = (enemyWave.maxFreq - enemyWave.minFreq) / 2;
+        frequency = enemyWave.minFreq + (enemyWave.maxFreq - enemyWave.minFreq) / 2;
     }
 
     void Update()

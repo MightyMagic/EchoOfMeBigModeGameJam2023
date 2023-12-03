@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaveLogic : MonoBehaviour
 {
     public float maxRadius;
+    public float minRadius;
     public float waveSpeed;
 
     float timer;
@@ -12,7 +13,7 @@ public class WaveLogic : MonoBehaviour
 
     void Start()
     {
-        currentScale = 0.1f * Vector3.one;
+        currentScale = minRadius * Vector3.one;
         timer = 0.05f;
     }
 

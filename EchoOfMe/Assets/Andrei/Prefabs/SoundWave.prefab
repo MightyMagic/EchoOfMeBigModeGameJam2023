@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8524561301444747360}
   - component: {fileID: 4964258791633050518}
   - component: {fileID: 3703683459817197951}
+  - component: {fileID: -6230095214315207992}
   m_Layer: 0
   m_Name: SoundWave
-  m_TagString: Untagged
+  m_TagString: SoundWave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +98,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRadius: 0
+  minRadius: 0
   waveSpeed: 0
-  isActivated: 1
-  timer: 0.1
+--- !u!64 &-6230095214315207992
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5047879811348369264}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 905485977951547768, guid: 30dd1b75524b83f4a86daad3d82e76e0, type: 3}

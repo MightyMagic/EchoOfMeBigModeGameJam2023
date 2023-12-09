@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerWaveCollider : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] WaveControl waveControl;
+    public WaveControl waveControl;
 
     [Header("Internal")]
     private List<GameObject> enemiesInRange = new List<GameObject>();

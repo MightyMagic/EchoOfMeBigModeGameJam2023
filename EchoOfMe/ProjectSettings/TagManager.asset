@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerWave
   - Enemy
+  - SoundWave
   layers:
   - Default
   - TransparentFX

@@ -22,7 +22,7 @@ public class WaveControl : MonoBehaviour
     private void Start()
     {
         freqTimer = 5f;
-        ResetFrequency();
+        currentFreq = 50f;
     }
 
     void Update()
@@ -56,7 +56,7 @@ public class WaveControl : MonoBehaviour
     private void ResetFrequency()
     {
         if(Time.time - freqTimer > 1.5f)
-            currentFreq = 5f;
+            currentFreq = 50f;
     }
 
 

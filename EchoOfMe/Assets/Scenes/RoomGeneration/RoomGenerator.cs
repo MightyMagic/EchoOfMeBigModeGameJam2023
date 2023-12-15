@@ -44,9 +44,9 @@ public class RoomGenerator : MonoBehaviour
 
     private void SpawnDecoration(Vector3 position)
     {
-        int furnitureIndex = Random.Range(0, roomType.furnitureSelection.Length);
+        int furnitureIndex = Random.Range(0, roomType.furniture.Length);
 
-        Instantiate(roomType.furnitureSelection[furnitureIndex], position, Quaternion.identity);
+        Instantiate(roomType.furniture[furnitureIndex].prefab, position, Quaternion.identity);
     }
 
     private void FillRoom()

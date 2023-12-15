@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "RoomScriptableObject", menuName = "Room")]
@@ -11,5 +12,12 @@ public class RoomType : ScriptableObject
     public int roomLength;
 
     [Header("Decorations")]
-    public GameObject[] furnitureSelection;
+    public Furniture[] furniture;
+}
+
+[System.Serializable]
+public class Furniture
+{
+    public int chance = 80;
+    public GameObject prefab;
 }

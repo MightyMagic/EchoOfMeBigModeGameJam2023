@@ -8,8 +8,9 @@ public class RoomGenerator : MonoBehaviour
     [SerializeField] GameObject player;
 
     [Header("Room Properties")]
+    [SerializeField] int roomWidth;
+    [SerializeField] int roomLength;
 
-    [Header("Decoration")]
     [Header("Decorations")]
     public GameObject[] furnitureSelection;
 
@@ -27,7 +28,6 @@ public class RoomGenerator : MonoBehaviour
 
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Vector3 position = player.transform.position;
@@ -39,6 +39,11 @@ public class RoomGenerator : MonoBehaviour
         {
             Destroy(GameObject.FindWithTag("Decoration"));
         }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            FillRoom();
+        }
     }
 
     private void SpawnDecoration(Vector3 position)
@@ -46,6 +51,21 @@ public class RoomGenerator : MonoBehaviour
         int furnitureIndex = Random.Range(0, furnitureSelection.Length);
 
         Instantiate(furnitureSelection[furnitureIndex], position, Quaternion.identity);
+    }
+
+    private void FillRoom()
+    {
+        int step = 10;
+
+        for (int x = 0; x < roomWidth; x += step)
+        {
+            for (int z = 0; z < roomLength; z += step)
+            {
+                Vector3 position = new Vector3(x, 5f, z);
+
+                SpawnDecoration(position);
+            }
+        }
     }
 
     private void AddSpikes()

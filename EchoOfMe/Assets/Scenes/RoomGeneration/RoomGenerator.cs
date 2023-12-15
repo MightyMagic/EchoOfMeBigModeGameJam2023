@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RoomGenerator : MonoBehaviour
 {
+    [Header("Room Properties")]
+    public GameObject[] forniture;
+
     // Start is called before the first frame update
     void Start()
     {

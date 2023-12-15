@@ -30,7 +30,9 @@ public class RoomGenerator : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SpawnSomething();
+            Vector3 position = player.transform.position;
+
+            SpawnDecoration(position);
         }
 
         if (Input.GetKeyDown(KeyCode.C))
@@ -39,11 +41,9 @@ public class RoomGenerator : MonoBehaviour
         }
     }
 
-    private void SpawnSomething()
+    private void SpawnDecoration(Vector3 position)
     {
         int furnitureIndex = Random.Range(0, furnitureSelection.Length);
-        Vector3 position = player.transform.position; // new Vector3(10, 1, 10);
-
 
         Instantiate(furnitureSelection[furnitureIndex], position, Quaternion.identity);
     }

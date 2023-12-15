@@ -33,7 +33,11 @@ public class RoomGenerator : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Destroy(GameObject.FindWithTag("Decoration"));
+            GameObject[] decorations = GameObject.FindGameObjectsWithTag("Decoration");
+            foreach (GameObject decoration in decorations)
+            {
+                Destroy(decoration);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.G))

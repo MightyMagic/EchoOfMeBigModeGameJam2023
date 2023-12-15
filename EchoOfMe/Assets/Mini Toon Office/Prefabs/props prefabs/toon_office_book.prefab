@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: -4821402519091702867}
   m_Layer: 0
   m_Name: toon_office_book
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

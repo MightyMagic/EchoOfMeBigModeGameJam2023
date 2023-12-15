@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 563949346553209319}
   m_Layer: 0
   m_Name: toon_office_pilot_red
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

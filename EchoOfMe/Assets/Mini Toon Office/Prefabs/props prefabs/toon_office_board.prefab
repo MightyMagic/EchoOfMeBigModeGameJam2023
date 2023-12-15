@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2569169349713207935}
   m_Layer: 0
   m_Name: toon_office_board
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

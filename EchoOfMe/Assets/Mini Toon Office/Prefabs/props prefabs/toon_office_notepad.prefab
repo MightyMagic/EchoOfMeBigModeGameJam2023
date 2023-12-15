@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 2058343925102793499}
   m_Layer: 0
   m_Name: toon_office_notepad
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class RoomGenerator : MonoBehaviour
 {
     [Header("Room Properties")]
-    public GameObject[] forniture;
+    public GameObject[] furnitureSelection;
 
     // Start is called before the first frame update
     void Start()

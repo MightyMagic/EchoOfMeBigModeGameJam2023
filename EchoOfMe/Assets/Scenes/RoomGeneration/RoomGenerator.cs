@@ -6,13 +6,9 @@ public class RoomGenerator : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] GameObject player;
+    [SerializeField] RoomType roomType;
 
     [Header("Room Properties")]
-    [SerializeField] int roomWidth;
-    [SerializeField] int roomLength;
-
-    [Header("Decorations")]
-    public GameObject[] furnitureSelection;
 
     private TerrainData terrainData;
 
@@ -23,7 +19,7 @@ public class RoomGenerator : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -48,18 +44,18 @@ public class RoomGenerator : MonoBehaviour
 
     private void SpawnDecoration(Vector3 position)
     {
-        int furnitureIndex = Random.Range(0, furnitureSelection.Length);
+        int furnitureIndex = Random.Range(0, roomType.furnitureSelection.Length);
 
-        Instantiate(furnitureSelection[furnitureIndex], position, Quaternion.identity);
+        Instantiate(roomType.furnitureSelection[furnitureIndex], position, Quaternion.identity);
     }
 
     private void FillRoom()
     {
         int step = 10;
 
-        for (int x = 0; x < roomWidth; x += step)
+        for (int x = 0; x < roomType.roomWidth ; x += step)
         {
-            for (int z = 0; z < roomLength; z += step)
+            for (int z = 0; z < roomType.roomLength; z += step)
             {
                 Vector3 position = new Vector3(x, 5f, z);
 

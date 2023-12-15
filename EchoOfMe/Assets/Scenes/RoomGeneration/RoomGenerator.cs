@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class RoomGenerator : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] GameObject player;
+
     [Header("Room Properties")]
+
+    [Header("Decoration")]
     public GameObject[] furnitureSelection;
 
     private TerrainData terrainData;
@@ -21,8 +26,25 @@ public class RoomGenerator : MonoBehaviour
 
     void Update()
     {
-        
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SpawnSomething();
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Destroy(GameObject.FindWithTag("Decoration"));
+        }
+    }
+
+    private void SpawnSomething()
+    {
+        int furnitureIndex = Random.Range(0, furnitureSelection.Length);
+        Vector3 position = player.transform.position; // new Vector3(10, 1, 10);
+
+
+        Instantiate(furnitureSelection[furnitureIndex], position, Quaternion.identity);
     }
 
     private void AddSpikes()

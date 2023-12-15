@@ -2740,6 +2740,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6967fbe016989ea4da505bfabf95eaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 627371165}
+  roomWidth: 0
+  roomLength: 0
   furnitureSelection:
   - {fileID: 8597855651660641000, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
   - {fileID: 2799242785918641492, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}

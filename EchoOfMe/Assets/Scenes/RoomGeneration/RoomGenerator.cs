@@ -50,6 +50,11 @@ public class RoomGenerator : MonoBehaviour
     {
         int furnitureIndex = Random.Range(0, roomType.furniture.Length);
 
+        if (Random.Range(0, 100) <= roomType.furniture[furnitureIndex].chance)
+        {
+            return;
+        }
+
         Instantiate(roomType.furniture[furnitureIndex].prefab, position, Quaternion.identity);
     }
 

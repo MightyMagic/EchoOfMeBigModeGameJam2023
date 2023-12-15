@@ -2740,8 +2740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6967fbe016989ea4da505bfabf95eaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomWidth: 0
-  roomLength: 0
   forniture:
   - {fileID: 8597855651660641000, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
   - {fileID: 6070418075575626771, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
@@ -3098,7 +3096,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 80

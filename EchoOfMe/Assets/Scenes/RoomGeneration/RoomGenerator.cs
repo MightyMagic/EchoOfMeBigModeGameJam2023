@@ -7,15 +7,40 @@ public class RoomGenerator : MonoBehaviour
     [Header("Room Properties")]
     public GameObject[] furnitureSelection;
 
-    // Start is called before the first frame update
+    private TerrainData terrainData;
+
+    void Awake()
+    {
+        terrainData = GetComponent<Terrain>().terrainData;
+    }
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+
+    }
+
+    private void AddSpikes()
+    {
+        int heightmapWidth = 10; // terrainData.heightmapResolution;
+        int heightmapHeight = 10; // terrainData.heightmapResolution;
+        float[,] heights = terrainData.GetHeights(50, 50, heightmapWidth, heightmapHeight);
+
+        for (int x = 0; x < heightmapWidth; x++)
+        {
+            for (int y = 0; y < heightmapHeight; y++)
+            {
+                float cos = Mathf.Cos(x);
+                float sin = -Mathf.Sin(y);
+                heights[x, y] = (cos + sin) / 250;
+            }
+        }
+
+        terrainData.SetHeights(50, 50, heights);
     }
 }

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a33f1070d2ce741964b256f6977941, type: 3}
+  m_Name: Office
+  m_EditorClassIdentifier: 
+  roomName: Office
+  roomWidth: 100
+  roomLength: 100
+  enemyCount: 0
+  furnitureSelection:
+  - {fileID: 7425838284820148179, guid: 4ff5a917ee05d4e27a188b977e58d326, type: 3}
+  - {fileID: 8902904784820920504, guid: cd6fb14eee4254287b5f2cb8ecc8e5db, type: 3}
+  - {fileID: 4617143140117712472, guid: 3a8cf12175ae6400dab162dff4927dc4, type: 3}
+  - {fileID: 4782563643712683259, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
+  - {fileID: 6881907605795576261, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
+  - {fileID: 2799242785918641492, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
+  - {fileID: 4907499685619757410, guid: d8e62113aeeee43d183ac5185ed7cb83, type: 3}
+  - {fileID: 8902904784820920504, guid: cd6fb14eee4254287b5f2cb8ecc8e5db, type: 3}
+  - {fileID: 3339638852232161003, guid: ecf1977f578304690ac5aa8eec474446, type: 3}
+  - {fileID: 8597855651660641000, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
+  - {fileID: 6070418075575626771, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}

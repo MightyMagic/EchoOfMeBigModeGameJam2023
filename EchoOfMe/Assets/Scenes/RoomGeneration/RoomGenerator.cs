@@ -10,6 +10,7 @@ public class RoomGenerator : MonoBehaviour
     [Header("Room Properties")]
 
     [Header("Decoration")]
+    [Header("Decorations")]
     public GameObject[] furnitureSelection;
 
     private TerrainData terrainData;
